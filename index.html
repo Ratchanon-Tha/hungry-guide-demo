@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangkok Restaurants</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bangkok Restaurants</h1>
+        <button class="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+    </header>
+    <main>
+        <div class="quick-filter-container">
+            <button class="quick-filter-btn" data-category="Noodles">
+                <i class="fas fa-bowl-food"></i>
+                <span>Noodles</span>
+            </button>
+            <button class="quick-filter-btn" data-category="Coffee">
+                <i class="fas fa-coffee"></i>
+                <span>Coffee & Tea</span>
+            </button>
+            <button class="quick-filter-btn" data-category="Salad">
+                <i class="fas fa-carrot"></i>
+                <span>Salad</span>
+            </button>
+            <button class="quick-filter-btn" data-category="Dessert">
+                <i class="fas fa-ice-cream"></i>
+                <span>Dessert</span>
+            </button>
+            <button class="quick-filter-btn" data-category="Bakery">
+                <i class="fas fa-bread-slice"></i>
+                <span>Bakery</span>
+            </button>
+            <button class="quick-filter-btn" data-category="Bar">
+                <i class="fas fa-martini-glass-citrus"></i>
+                <span>Bar</span>
+            </button>
+            <button class="quick-filter-btn" data-category="Italian">
+                <i class="fas fa-pizza-slice"></i>
+                <span>Italian</span>
+            </button>
+            <button class="quick-filter-btn" data-category="Japanese">
+                <i class="fas fa-bowl-rice"></i>
+                <span>Japanese</span>
+            </button>
+            <button class="quick-filter-btn" data-category="Seafood">
+                <i class="fas fa-shrimp"></i>
+                <span>Seafood</span>
+            </button>
+            <button class="quick-filter-btn active" data-category="All">
+                <i class="fas fa-border-all"></i>
+                <span>All</span>
+            </button>
+        </div>
+
+        <section class="editors-pick">
+            <h2>Editor's Pick</h2>
+            <div class="quick-filter-container">
+                <div class="card" data-category="Thai,Noodles">
+                    <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Restaurant Image" loading="lazy">
+                    <div class="card-content">
+                        <h2>Sorn</h2>
+                        <p>Southern Thai</p>
+                    </div>
+                </div>
+                <div class="card" data-category="Indian">
+                    <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Restaurant Image" loading="lazy">
+                    <div class="card-content">
+                        <h2>Gaggan Anand</h2>
+                        <p>Progressive Indian</p>
+                    </div>
+                </div>
+                <div class="card" data-category="Thai,Noodles">
+                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Restaurant Image" loading="lazy">
+                        <div class="card-content">
+                        <h2>Le Du</h2>
+                        <p>Modern Thai</p>
+                    </div>
+                </div>
+                <div class="card" data-category="German,European">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Restaurant Image" loading="lazy">
+                    <div class="card-content">
+                        <h2>Sühring</h2>
+                        <p>German</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recommendation">
+            <h2>Recommendation</h2>
+            <div class="card-container">
+            <div class="card" data-category="Chinese,Noodles" onclick="window.location.href='https://central-x.test-app.link/directory-shop-detail?external_id=25fca556-7d16-507f-ae54-b877dc2fcbac'">
+                <img src="https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Restaurant Image" loading="lazy">
+                <div class="card-content">
+                    <h2>Kam’s Roast</h2>
+                    <p>Chinese Roast</p>
+                </div>
+            </div>
+            <div class="card" data-category="European,Bar" onclick="window.location.href='https://central-x.test-app.link/directory-shop-detail?external_id=25fca556-7d16-507f-ae54-b877dc2fcbac'">
+                <img src="https://plus.unsplash.com/premium_photo-1669557209110-34d9a507d1f9?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Restaurant Image" loading="lazy">
+                <div class="card-content">
+                    <h2>Red Sky Restaurant</h2>
+                    <p>European Fine Dining</p>
+                </div>
+            </div>
+            <div class="card" data-category="Spanish,Seafood" onclick="window.location.href='https://central-x.test-app.link/directory-shop-detail?external_id=25fca556-7d16-507f-ae54-b877dc2fcbac'">
+                <img src="https://images.unsplash.com/photo-1643312767944-d9d6d72798b0?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Restaurant Image" loading="lazy">
+                <div class="card-content">
+                    <h2>UNO MAS</h2>
+                    <p>Spanish/Mediterranean</p>
+                </div>
+            </div>
+            <div class="card" data-category="Italian,Thai" onclick="window.location.href='https://central-x.test-app.link/directory-shop-detail?external_id=25fca556-7d16-507f-ae54-b877dc2fcbac'">
+                <img src="https://images.unsplash.com/photo-1560180474-e8563fd75bab?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Restaurant Image" loading="lazy">
+                <div class="card-content">
+                    <h2>Ventisi</h2>
+                    <p>Italian-Thai Fusion</p>
+                </div>
+            </div>
+            <div class="card" data-category="Chinese,Noodles" onclick="window.location.href='https://central-x.test-app.link/directory-shop-detail?external_id=25fca556-7d16-507f-ae54-b877dc2fcbac'">
+                <img src="https://plus.unsplash.com/premium_photo-1669831178095-005ed789250a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Restaurant Image" loading="lazy">
+                <div class="card-content">
+                    <h2>Chuan Kitchen</h2>
+                    <p>Chinese/Singaporean Fusion</p>
+                </div>
+            </div>
+            <div class="card" data-category="Coffee,Dessert" onclick="window.location.href='https://central-x.test-app.link/directory-shop-detail?external_id=25fca556-7d16-507f-ae54-b877dc2fcbac'">
+                <img src="https://images.unsplash.com/photo-1597403491447-3ab08f8e44dc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGRyaW5rc3xlbnwwfHwwfHx8MA%3D%3D" alt="Restaurant Image" loading="lazy">
+                <div class="card-content">
+                    <h2>Cocoa XO Bar</h2>
+                    <p>Bar/Chocolate Lounge</p>
+                </div>
+            </div>
+            <div class="card" data-category="Thai,Salad" onclick="window.location.href='https://central-x.test-app.link/directory-shop-detail?external_id=25fca556-7d16-507f-ae54-b877dc2fcbac'">
+                <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Restaurant Image" loading="lazy">
+                <div class="card-content">
+                    <h2>Sorn</h2>
+                    <p>Southern Thai</p>
+                </div>
+            </div>
+            <div class="card" data-category="Indian" onclick="window.location.href='https://central-x.test-app.link/directory-shop-detail?external_id=25fca556-7d16-507f-ae54-b877dc2fcbac'">
+                <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Restaurant Image" loading="lazy">
+                <div class="card-content">
+                    <h2>Gaggan Anand</h2>
+                    <p>Progressive Indian</p>
+                </div>
+            </div>
+            <div class="card" data-category="Thai,Noodles" onclick="window.location.href='https://central-x.test-app.link/directory-shop-detail?external_id=25fca556-7d16-507f-ae54-b877dc2fcbac'">
+                <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Restaurant Image" loading="lazy">
+                <div class="card-content">
+                    <h2>Le Du</h2>
+                    <p>Modern Thai</p>
+                </div>
+            </div>
+        </div>
+        </section>
+    </main>
+    <button class="scroll-to-top"><i class="fas fa-arrow-up"></i></button>
+    <footer>
+        <p>&copy; 2025 Bangkok Restaurants. All rights reserved.</p>
+    </footer>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const quickFilterButtons = document.querySelectorAll('.quick-filter-btn');
+    const allCards = document.querySelectorAll('.card-container .card');
+    const darkModeToggle = document.querySelector('.dark-mode-toggle');
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+    quickFilterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.dataset.category;
+
+            quickFilterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            allCards.forEach(card => {
+                if (category === 'All' || card.dataset.category.includes(category)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollToTopButton.classList.add('show');
+        } else {
+            scrollToTopButton.classList.remove('show');
+        }
+    });
+
+    scrollToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const icon = darkModeToggle.querySelector('i');
+        if (document.body.classList.contains('dark-mode')) {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
+    });
+});
+</script>
+</body>
+</html>
