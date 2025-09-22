@@ -2,26 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Cookie POC</title>
-  <style>
-    body { font-family: sans-serif; padding: 20px; }
-    .card { border: 1px solid #ccc; padding: 10px; margin: 5px; cursor: pointer; }
-    .banner { margin-bottom: 20px; }
-  </style>
+  <title>Cross-Subdomain Cookie POC</title>
 </head>
 <body>
-  <div class="banner">
-    <p id="cookie-status">Checking cookie...</p>
-    <button onclick="setDarkTheme()">Set Dark Theme Cookie</button>
-  </div>
-
-  <div class="card" onclick="goToDetail(1)">Shop 1</div>
-  <div class="card" onclick="goToDetail(2)">Shop 2</div>
+  <h1>Subdomain A</h1>
+  <p id="cookie-status">Checking cookie...</p>
+  <button onclick="setCookie()">Set Cookie for .github.io</button>
+  <a href="https://ratchanon-tha.github.io/hungry-guide-cookie-poc/index.html">Go to Subdomain B</a>
 
   <script>
-    function setDarkTheme() {
-      document.cookie = "darkTheme=true; path=/;";
-      document.getElementById("cookie-status").innerText = "Cookie set: darkTheme=true";
+    function setCookie() {
+      // domain=.github.io allows sharing across all subdomains
+      document.cookie = "sharedTheme=dark; path=/; domain=.github.io;";
+      document.getElementById("cookie-status").innerText = "Cookie set: sharedTheme=dark";
     }
 
     function getCookie(name) {
@@ -31,15 +24,10 @@
       return null;
     }
 
-    function goToDetail(id) {
-      window.location.href = "detail.html?shop=" + id;
-    }
-
-    // check cookie on load
-    const darkTheme = getCookie("darkTheme");
-    document.getElementById("cookie-status").innerText = darkTheme
-      ? "Cookie detected: darkTheme=" + darkTheme
-      : "No darkTheme cookie set";
+    const theme = getCookie("sharedTheme");
+    document.getElementById("cookie-status").innerText = theme
+      ? "Cookie detected: sharedTheme=" + theme
+      : "No cookie set yet";
   </script>
 </body>
 </html>
