@@ -1,36 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <title>Cross-Subdomain Cookie POC</title>
+    <title>Set Cookie</title>
   </head>
   <body>
-    <h1>Subdomain A</h1>
-    <p id="cookie-status">Checking cookie...</p>
-    <button onclick="setCookie()">Set Cookie for .github.io</button>
-    <a href="https://ratchanontha.github.io/cookie-subdomain-poc/index.html"
-      >Go to Subdomain B</a
-    >
+    <h1>Site A: Setting the Cookie</h1>
+    <button onclick="setSharedCookie()">Set Shared Cookiesss</button>
+
+    <button onclick="navigate()">Set Cookie & Go to Site B</button>
 
     <script>
-      function setCookie() {
-        // domain=.github.io allows sharing across all subdomains
-        document.cookie = "dark-theme=true; path=/; Domain=.github.io";
-        document.getElementById("cookie-status").innerText =
-          "Cookie set: dark-theme=true";
+      function setSharedCookie() {
+        // Key part: Domain=.local.dev makes it accessible to all subdomains
+        document.cookie = "dark-theme=true; path=/; Domain=.local.test";
+        alert("Cookie set for .local.test!");
       }
 
-      function getCookie(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(";").shift();
-        return null;
+      function navigate() {
+        window.location.href = "https://ratchanontha.github.io/cookie-subdomain-poc/index.html";
       }
-
-      const theme = getCookie("dark-theme");
-      document.getElementById("cookie-status").innerText = theme
-        ? "Cookie detected: dark-theme=" + theme
-        : "No cookie set yet";
     </script>
   </body>
 </html>
+
