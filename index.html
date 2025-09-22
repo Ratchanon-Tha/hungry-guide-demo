@@ -5,21 +5,11 @@
   </head>
   <body>
     <h1>Site A: Setting the Cookie</h1>
-    <button onclick="setSharedCookie()">Set Shared Cookiesss</button>
 
+    <button onclick="setSharedCookie()">Set Shared Cookie</button>
     <button onclick="navigate()">Set Cookie & Go to Site B</button>
 
-    <script>
-      function setSharedCookie() {
-        // Key part: Domain=.local.dev makes it accessible to all subdomains
-        document.cookie = "dark-theme=true; path=/; Domain=.github.io";
-        alert("Cookie set for .github.io!");
-      }
-
-      function navigate() {
-        window.location.href = "https://ratchanontha.github.io/cookie-subdomain-poc/index.html";
-      }
-    </script>
+    <!-- Link external JS file -->
+    <script src="index.js"></script>
   </body>
 </html>
-
