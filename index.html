@@ -8,14 +8,13 @@
   <h1>Subdomain A</h1>
   <p id="cookie-status">Checking cookie...</p>
   <button onclick="setCookie()">Set Cookie for .github.io</button>
-  <a href="https://ratchanon-tha.github.io/hungry-guide-cookie-poc/index.html">Go to Subdomain B</a>
+  <a href="https://ratchanontha.github.io/cookie-subdomain-poc/index.html">Go to Subdomain B</a>
 
   <script>
     function setCookie() {
       // domain=.github.io allows sharing across all subdomains
-      document.cookie = "sharedTheme=dark; path=/; domain=.github.io;";
-      document.getElementById("cookie-status").innerText = "Cookie set: sharedTheme=dark";
-    }
+      document.cookie = "dark-theme=true; path=/; domain=.github.io;";
+      document.getElementById("cookie-status").innerText = "Cookie set: dark-theme=true";
 
     function getCookie(name) {
       const value = `; ${document.cookie}`;
@@ -24,9 +23,9 @@
       return null;
     }
 
-    const theme = getCookie("sharedTheme");
+    const theme = getCookie("dark-theme");
     document.getElementById("cookie-status").innerText = theme
-      ? "Cookie detected: sharedTheme=" + theme
+      ? "Cookie detected: dark-theme=" + theme
       : "No cookie set yet";
   </script>
 </body>
