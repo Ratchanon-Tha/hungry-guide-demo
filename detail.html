@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shop Detail</title>
+</head>
+<body>
+  <h1>Shop Detail Page</h1>
+  <p id="shop-id"></p>
+  <p id="cookie-info"></p>
+  <a href="index.html">⬅ Back</a>
+
+  <script>
+    // Get query param
+    const params = new URLSearchParams(window.location.search);
+    const shopId = params.get("shop");
+    document.getElementById("shop-id").innerText = "Shop ID: " + shopId;
+
+    // Read cookie
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+      return null;
+    }
+    const darkTheme = getCookie("darkTheme");
+    document.getElementById("cookie-info").innerText =
+      "darkTheme cookie = " + (darkTheme ?? "not set");
+  </script>
+</body>
+</html>
